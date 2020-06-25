@@ -18,6 +18,8 @@ class Library():
         if book in self.list_of_books:
             if self.lend_data[book] is None:
                 self.lend_data[book] = author
+                ##### Adding a Change ####
+                 self.list_of_books.remove(book)
             else:
                 print(f"Sorry This book is lend by {self.lend_data[book]}")
         else:
